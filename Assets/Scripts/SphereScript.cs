@@ -21,9 +21,13 @@ public class SphereScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        Actions.MyEvent += moveSphere;
+    }
+
+    private void OnDisable()
+    {
+        Actions.MyEvent -= moveSphere;
     }
 }

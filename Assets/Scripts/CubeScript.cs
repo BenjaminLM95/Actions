@@ -21,9 +21,13 @@ public class CubeScript : MonoBehaviour
        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
+        Actions.MyEvent += moveCube;
+    }
 
+    private void OnDisable()
+    {
+        Actions.MyEvent -= moveCube;
     }
 }

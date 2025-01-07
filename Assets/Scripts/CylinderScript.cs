@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,21 +12,15 @@ public class CylinderScript : MonoBehaviour
         this.GetComponent<Renderer>().material = nMaterial;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        Actions.MyEvent += materialChange; 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        Actions.MyEvent -= materialChange;
     }
-
-    on
-
-    
 
 
 }

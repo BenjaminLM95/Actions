@@ -9,7 +9,8 @@ public class TriggerAction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Switch")) 
         {
-            Action.MyEvent?.Invoke(); 
+            Actions.MyEvent?.Invoke(); 
+            
         }
     }
 }
